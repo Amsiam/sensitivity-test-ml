@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Sensitivity</title>
+     <link href="{{ url_for('static', filename='bootstrap.css') }}" rel="stylesheet" />
+     <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+     <div class="container">
+          <header>
+               <div class="border border-success p-2 mb-2 border-opacity-75 ">
+                    <h1>Predicting Dental Sensitivity using machine learning </h1>
+               </div>
+          </header>
+
+          {% if pred==0 or pred==1 %}
+          <section id="prediction-section">
+               <h2>Prediction Result</h2>
+               <p id="prediction-output">
+                    {% if pred==0  %}
+                    <div class="alert alert-success">
+                    You are probably not in the risk of having sensitivity
+                    </div>
+                    {% else %}
+                    <div class="alert alert-danger">
+                    You are in the risk of having sensitivity
+                    </div>
+
+                    {% endif %}
+               </p>
+          </section>
+          {% endif %}
+
+          <form action="" method="post">
+
+               <div class="row">
+                    <div class="col ">
+
+                         <div>
+
+                              <section id="form-section">
+                                   <h3>Input Your Information</h3>
+
+                                   <div class="row">
+                                        <div class="col-6">
+                                             <label>Age:</label>
+                                             <input type="number" class="form-control" id="age" name="age" required>
+
+                                        </div>
+                                        <div class="col-6">
+                                             <label for="gender">Gender:</label>
+                                             <select name="gender" class="form-control">
+                                                  <option value="0">Male</option>
+                                                  <option value="1">Female</option>
+                                             </select>
+                                        </div>
+
+
+                                   </div>
+
+                                   <label>1. Do you feel sensitivity in hot/cold temperature?</label>
+                                   <div class="checkbox">
+                                        <input name="stemp" value="1" type="radio"> Yes
+                                        <input name="stemp" checked value="0" type="radio"> No
+                                   </div>
+
+                                   <label>2. Do you have intense pain in hot/cold temperature?</label>
+                                   <div class="checkbox">
+                                        <input name="ptemp" value="1" type="radio"> Yes
+                                        <input name="ptemp" checked value="0" type="radio"> No
+                                   </div>
+
+                                   <label>3. Do you feel any pain during touching or applying pressure on tooth
+                                        area?</label>
+                                   <div class="checkbox">
+                                        <input name="ptouch" value="1" type="radio"> Yes
+                                        <input name="ptouch" checked value="0" type="radio"> No
+                                   </div>
+
+                                   <label>4. Do you have sensitivity in eating sweet foods?</label>
+                                   <div class="checkbox">
+                                        <input name="ssweet" value="1" type="radio"> Yes
+                                        <input name="ssweet" checked value="0" type="radio"> No
+                                   </div>
+
+                                   <label>5. Do you feel pain in tooths during biting/chewing?</label>
+                                   <div class="checkbox">
+                                        <input name="pbit" value="1" type="radio"> Yes
+                                        <input name="pbit" checked value="0" type="radio"> No
+                                   </div>
+
+                                   <label>6. Do you have bleeding in gums?</label>
+                                   <div class="checkbox">
+                                        <input name="bleeding" value="1" type="radio"> Yes
+                                        <input name="bleeding" checked value="0" type="radio"> No
+                                   </div>
+
+
+                                   <label>7. Did you have any dental problems before?</label>
+                                   <div class="checkbox">
+                                        <input name="prob" value="1" type="radio"> Yes
+                                        <input name="prob" checked value="0" type="radio"> No
+                                   </div>
+
+
+                                   <label>8. Are you a smoker?</label>
+                                   <div class="checkbox">
+                                        <input name="smoker" value="1" type="radio"> Yes
+                                        <input name="smoker" checked value="0" type="radio"> No
+                                   </div>
+
+
+                                   <label>9. Do you have diabetes?</label>
+                                   <div class="checkbox">
+                                        <input name="diabetes" value="1" type="radio"> Yes
+                                        <input name="diabetes" checked value="0" type="radio"> No
+                                   </div>
+
+                                   <label>10. Do you eat betel leaf/nut?</label>
+                                   <div class="checkbox">
+                                        <input name="beat" value="1" type="radio"> Yes
+                                        <input name="beat" checked value="0" type="radio"> No
+                                   </div>
+
+
+                                   <label>11. Do you brush more than two times regularly?</label>
+                                   <div class="checkbox">
+                                        <input name="brush" value="1" type="radio"> Yes
+                                        <input name="brush" checked value="0" type="radio"> No
+                                   </div>
+
+                                   <div class="d-grid gap-2 col-6 mx-auto">
+                                        <button class="btn btn-dark" type="submit">Predict Sensitivity</button>
+                                   </div>
+                              </section>
+
+
+                              <h2>What is teeth sensitivity?</h2>
+                              <p>
+
+                                   Teeth sensitivity usually occurs when the underlying layer of your teeth called the
+                                   dentin
+                                   becomes exposed. This can happen due to erosion (wear and tear) and gum recession
+                                   (when
+                                   your gum tissue pulls away from your teeth, exposing the roots).
+
+                                   Teeth roots, which aren’t covered by hard enamel, contain thousands of tiny tubules
+                                   leading to your tooth’s center (the pulp). These dentinal tubules (or channels) allow
+                                   stimuli — for example, hot, cold or sweet food — to reach the nerve in your tooth,
+                                   which
+                                   results in the pain you feel.
+
+                                   Dental sensitivity can also be a symptom of other issues, including cavities, gum
+                                   disease
+                                   or a cracked tooth.
+                              </p>
+                         </div>
+                    </div>
+
+               </div>
+          </form>
+     </div>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+.container{
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #8d6aeb; /* Add border */
+    border-radius: 7px; /* Rounded corners */; 
+    text-align: left;
+    background-color: #BED7DC;
+    line-height: 35px;
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+   
+}
+header{
+    text-align: center;
+    text-decoration-color:  maroon;
+    background-color: #FFF5E0;
+}
+h1{
+    color: maroon !important;
+    font-weight: bolder !important;
+}
+h2{
+    font-weight: bold !important;
+}
+button{
+    padding: 20px 20px 20px 20px ;
+    outline: white;
+}
+label{
+    font-weight:bold;
+    font-size: large;
+    
+}
