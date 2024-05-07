@@ -2,16 +2,16 @@
 
 Open tarminal and type 
 ```
-git clone https://github.com/Amsiam/leaf_identification.git
+git clone https://github.com/Amsiam/sensitivity-test-ml.git
 ```
 or download from 
 ```
-https://github.com/Amsiam/leaf_identification.git
+https://github.com/Amsiam/sensitivity-test-ml.git
 ```
 
 then navigate that folder
 ```
-cd leaf_identification
+cd sensitivity-test-ml
 ```
 Create a virtual environment
 ```
